@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.center {
+  position: relative;
+  top: 30%;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* Backgrounds */
+.home { background: linear-gradient(to right, #ff758c, #ff7eb3); }
+.normal { background: linear-gradient(to right, #8360c3, #2ebf91); }
+.kiss { background: linear-gradient(to right, #ff4e50, #f9d423); }
+.valentine { background: linear-gradient(to right, #ff0844, #ffb199); }
+
+.intro {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.intro-text {
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hearts */
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Proposal */
+.proposal {
+  display: none;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Map line */
+.map-line {
+  width: 220px;
+  height: 4px;
+  background: white;
+  margin: 10px auto;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 5px white; }
+  to { box-shadow: 0 0 20px pink; }
+}
